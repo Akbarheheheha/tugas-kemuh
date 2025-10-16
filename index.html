@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Logo_Muhammadiyah.svg-removebg-preview.png" />
+    <title>kemuhammadiyahan bab 7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              muhammadiyah: {
+                blue: "#004B8D",
+                gold: "#F4C300",
+                white: "#FFFFFF",
+                green: "#0F5132",
+                ijoMuda: "#0D9488",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
+  <body class="bg-gradient-to-br from-yellow-50 to-amber-50">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-muhammadiyah-green text-white shadow-lg sticky top-0 z-30">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <button id="sidebarToggle" class="mr-4 md:hidden">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+            <div class="flex items-center">
+              <img
+                class="h-12 mr-3"
+                src="Logo_Muhammadiyah.svg-removebg-preview.png"
+                alt=""
+              />
+              <h1 class="text-xl font-bold">MKCHM - Muhammadiyah</h1>
+            </div>
+          </div>
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#pengertian"
+              class="hover:text-yellow-200 transition-colors duration-300"
+              >Pengertian</a
+            >
+            <a
+              href="#isi"
+              class="hover:text-yellow-200 transition-colors duration-300"
+              >Isi MKCHM</a
+            >
+            <a
+              href="#sejarah"
+              class="hover:text-yellow-200 transition-colors duration-300"
+              >Sejarah</a
+            >
+            <a
+              href="#fungsi"
+              class="hover:text-yellow-200 transition-colors duration-300"
+              >Fungsi</a
+            >
+            <a
+              href="#hakikat"
+              class="hover:text-yellow-200 transition-colors duration-300"
+              >Hakikat</a
+            >
+            <a
+              href="#implementasi"
+              class="hover:text-yellow-200 transition-colors duration-300"
+              >Implementasi</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Overlay for Mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="flex">
+      <!-- Sidebar -->
+      <aside
+        class="sidebar bg-white shadow-lg w-64 min-h-screen fixed md:relative z-20"
+      >
+        <div class="p-4 border-b bg-muhammadiyah-green text-white">
+          <h2 class="text-lg font-semibold">Menu Navigasi</h2>
+          <p class="text-sm opacity-90">Matan Keyakinan & Cita-cita Hidup</p>
+        </div>
+        <ul class="py-4">
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#pengertian" class="flex items-center text-gray-700">
+              <i class="fas fa-book mr-3 text-green-700"></i>
+              <span>Pengertian MKCHM</span>
+            </a>
+          </li>
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#isi" class="flex items-center text-gray-700">
+              <i class="fas fa-list-ol mr-3 text-green-700"></i>
+              <span>Isi MKCHM</span>
+            </a>
+          </li>
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#sejarah" class="flex items-center text-gray-700">
+              <i class="fas fa-history mr-3 text-green-700"></i>
+              <span>Sejarah Perumusan</span>
+            </a>
+          </li>
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#fungsi" class="flex items-center text-gray-700">
+              <i class="fas fa-cogs mr-3 text-green-700"></i>
+              <span>Fungsi MKCHM</span>
+            </a>
+          </li>
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#hakikat" class="flex items-center text-gray-700">
+              <i class="fas fa-lightbulb mr-3 text-green-700"></i>
+              <span>Hakikat MKCHM</span>
+            </a>
+          </li>
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#implementasi" class="flex items-center text-gray-700">
+              <i class="fas fa-hands-helping mr-3 text-green-700"></i>
+              <span>Implementasi</span>
+            </a>
+          </li>
+          <li
+            class="px-4 py-3 hover:bg-green-100 border-l-4 border-transparent hover:border-muhammadiyah-green transition-all duration-300"
+          >
+            <a href="#quiz" class="flex items-center text-gray-700">
+              <i class="fas fa-question-circle mr-3 text-green-700"></i>
+              <span>Kuis Pengetahuan</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="p-4 border-t border-yellow-200 mt-4">
+          <h3 class="font-semibold text-gray-700 mb-2">Download Materi</h3>
+          <div class="space-y-2">
+            <a
+              href="#"
+              class="flex items-center text-sm text-green-700 hover:text-yellow-800"
+            >
+              <i class="fas fa-file-pdf mr-2"></i> PDF MKCHM Lengkap
+            </a>
+            <a
+              href="#"
+              class="flex items-center text-sm text-green-700 hover:text-yellow-800"
+            >
+              <i class="fas fa-file-alt mr-2"></i> Ringkasan MKCHM
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content flex-1 p-6 md:ml-0">
+        <!-- Hero Section -->
+        <section
+          class="mb-12 bg-gradient-to-r from-muhammadiyah-green to-muhammadiyah-ijoMuda animate-gradient rounded-2xl shadow-xl p-8 text-white"
+        >
+          <div class="max-w-3xl">
+            <h1 class="text-4xl font-bold mb-4">
+              Matan Keyakinan dan Cita-cita Hidup Muhammadiyah
+            </h1>
+            <p class="text-xl mb-6 opacity-95">
+              Pedoman fundamental bagi warga Muhammadiyah dalam menjalani
+              kehidupan beragama, bermasyarakat, dan bernegara
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#pengertian"
+                class="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors duration-300 shadow-md"
+              >
+                Mulai Belajar
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pengertian MKCHM -->
+        <section id="pengertian" class="mb-12 section-animate">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <i class="fas fa-book text-yellow-600 text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-yellow-700">
+                Pengertian MKCHM
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div class="lg:col-span-2">
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                  <strong class="text-yellow-700"
+                    >Matan Keyakinan dan Cita-cita Hidup Muhammadiyah
+                    (MKCHM)</strong
+                  >
+                  adalah dokumen fundamental yang berisi prinsip-prinsip dasar,
+                  keyakinan, dan tujuan hidup organisasi Muhammadiyah. MKCHM
+                  menjadi pedoman bagi warga Muhammadiyah dalam menjalankan
+                  kehidupan beragama, bermasyarakat, dan bernegara.
+                </p>
+
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                  MKCHM merupakan kristalisasi dari pemahaman Islam yang
+                  berkemajuan yang diusung oleh Muhammadiyah. Dokumen ini
+                  menjadi landasan ideologis bagi seluruh gerakan dan aktivitas
+                  organisasi, baik dalam bidang dakwah, pendidikan, sosial,
+                  maupun kemasyarakatan.
+                </p>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg mb-6"
+                >
+                  <p class="text-gray-700 italic">
+                    "MKCHM merupakan penjabaran dari keyakinan Islam Ahlus
+                    Sunnah wal Jama'ah yang dipegang teguh oleh Muhammadiyah,
+                    sekaligus menjadi panduan untuk mewujudkan Islam yang
+                    rahmatan lil 'alamin."
+                  </p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-yellow-700 mb-4">
+                  Makna Kata "Matan"
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  Kata <strong>"Matan"</strong> dalam MKCHM berasal dari bahasa
+                  Arab yang berarti "teks pokok" atau "landasan". Dalam konteks
+                  ini, Matan merujuk pada teks fundamental yang menjadi pegangan
+                  dan pedoman utama bagi warga Muhammadiyah.
+                </p>
+              </div>
+
+              <div class="space-y-6">
+                <div
+                  class="bg-gradient-to-br from-yellow-100 to-amber-100 p-6 rounded-xl shadow-md"
+                >
+                  <h3 class="font-bold text-yellow-700 mb-3 text-lg">
+                    Poin Penting MKCHM:
+                  </h3>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Dokumen fundamental Muhammadiyah</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Pedoman hidup warga Muhammadiyah</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Landasan ideologis organisasi</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Kristalisasi Islam berkemajuan</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-check-circle text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Sumber nilai dan etika organisasi</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-gradient-to-br from-amber-100 to-yellow-100 p-6 rounded-xl shadow-md"
+                >
+                  <h3 class="font-bold text-yellow-700 mb-3 text-lg">
+                    Tujuan MKCHM:
+                  </h3>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i class="fas fa-bullseye text-yellow-600 mt-1 mr-2"></i>
+                      <span>Memandu kehidupan beragama</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-bullseye text-yellow-600 mt-1 mr-2"></i>
+                      <span>Mengarahkan aktivitas organisasi</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-bullseye text-yellow-600 mt-1 mr-2"></i>
+                      <span>Membentuk karakter warga Muhammadiyah</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-bullseye text-yellow-600 mt-1 mr-2"></i>
+                      <span>Menjadi panduan bermasyarakat</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Isi MKCHM -->
+        <section id="isi" class="mb-12 section-animate">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <i class="fas fa-list-ol text-yellow-600 text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-yellow-700">Isi MKCHM</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div
+                class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl shadow-md card-hover"
+              >
+                <h3
+                  class="font-bold text-yellow-700 mb-4 text-xl flex items-center"
+                >
+                  Keyakinan
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Keyakinan terhadap Allah SWT</strong> - Meyakini
+                      keesaan Allah, sifat-sifat-Nya, dan kekuasaan-Nya atas
+                      segala sesuatu</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Keyakinan terhadap Malaikat</strong> - Meyakini
+                      keberadaan malaikat sebagai makhluk Allah yang taat</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Keyakinan terhadap Kitab Suci</strong> - Meyakini
+                      Al-Qur'an sebagai pedoman hidup dan kitab-kitab
+                      sebelumnya</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Keyakinan terhadap Rasul</strong> - Meyakini Nabi
+                      Muhammad SAW sebagai rasul terakhir dan penutup para
+                      nabi</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Keyakinan terhadap Hari Akhir</strong> - Meyakini
+                      adanya kehidupan setelah kematian dan hari
+                      pembalasan</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Keyakinan terhadap Qada dan Qadar</strong> -
+                      Meyakini takdir Allah dengan tetap berusaha dan
+                      bertawakal</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl shadow-md card-hover"
+              >
+                <h3
+                  class="font-bold text-yellow-700 mb-4 text-xl flex items-center"
+                >
+                  <i class="fas fa-bullseye mr-3"></i> Cita-cita Hidup
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Menegakkan tauhid yang murni</strong> -
+                      Membersihkan akidah dari syirik dan khurafat</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Menyebarluaskan Islam</strong> - Melalui dakwah
+                      dengan hikmah dan mauidzah hasanah</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Meningkatkan harkat martabat manusia</strong> -
+                      Melalui pendidikan, kesehatan, dan pemberdayaan</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong
+                        >Mewujudkan masyarakat Islam yang
+                        sebenar-benarnya</strong
+                      >
+                      - Yang adil, makmur, dan diridhai Allah</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong>Menjadi rahmat bagi seluruh alam</strong> -
+                      Membawa kebaikan untuk semua makhluk</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-yellow-600 mt-1 mr-2"></i>
+                    <span
+                      ><strong
+                        >Menjunjung tinggi nilai-nilai akhlak mulia</strong
+                      >
+                      - Dalam semua aspek kehidupan</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl shadow-md"
+            >
+              <h3 class="font-bold text-yellow-700 mb-4 text-xl">
+                Prinsip Dasar MKCHM
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                  <i class="fas fa-quran text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">
+                    Berdasarkan Al-Qur'an
+                  </h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Mengacu pada ajaran Al-Qur'an sebagai sumber utama
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                  <i class="fas fa-sun text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">
+                    Mengikuti Sunnah
+                  </h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Berpedoman pada sunnah Nabi Muhammad SAW
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                  <i class="fas fa-brain text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">
+                    Menggunakan Akal
+                  </h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Menghargai peran akal dalam memahami agama
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center shadow-sm">
+                  <i
+                    class="fas fa-hands-helping text-yellow-600 text-2xl mb-2"
+                  ></i>
+                  <h4 class="font-semibold text-yellow-700">
+                    Rahmatan lil Alamin
+                  </h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Membawa rahmat bagi seluruh alam semesta
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sejarah Perumusan -->
+        <section id="sejarah" class="mb-12 section-animate">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <i class="fas fa-history text-yellow-600 text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-yellow-700">
+                Sejarah Perumusan MKCHM
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div class="lg:col-span-2">
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                  MKCHM dirumuskan pertama kali pada
+                  <strong
+                    >Muktamar Muhammadiyah ke-35 tahun 1962 di Jakarta</strong
+                  >. Perumusan ini dilatarbelakangi oleh kebutuhan akan adanya
+                  pedoman yang jelas dan sistematis tentang keyakinan dan
+                  cita-cita hidup warga Muhammadiyah.
+                </p>
+
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                  Proses perumusan MKCHM melibatkan para ulama, cendekiawan, dan
+                  pimpinan Muhammadiyah yang mendalam pemahamannya tentang Islam
+                  dan visi organisasi. Mereka berdiskusi secara intensif untuk
+                  merumuskan prinsip-prinsip dasar yang menjadi landasan gerakan
+                  Muhammadiyah.
+                </p>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg mb-6"
+                >
+                  <p class="text-gray-700 italic">
+                    "Perumusan MKCHM merupakan respons terhadap tantangan zaman
+                    dan kebutuhan akan pedoman yang jelas bagi warga
+                    Muhammadiyah dalam menghadapi perkembangan masyarakat
+                    modern."
+                  </p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-yellow-700 mb-4">
+                  Latar Belakang Perumusan
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  Pada awal 1960-an, Muhammadiyah menghadapi berbagai tantangan
+                  baru baik dari dalam maupun luar negeri. Perkembangan
+                  pemikiran modern, perubahan sosial politik, dan kebutuhan akan
+                  konsolidasi organisasi mendorong Muhammadiyah untuk merumuskan
+                  pedoman yang jelas tentang keyakinan dan cita-cita hidupnya.
+                </p>
+
+                <h3 class="text-xl font-semibold text-yellow-700 mb-4">
+                  Proses Perumusan
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  Proses perumusan MKCHM dilakukan melalui serangkaian diskusi,
+                  seminar, dan musyawarah yang melibatkan berbagai unsur dalam
+                  Muhammadiyah. Tim perumus bekerja dengan sungguh-sungguh untuk
+                  menghasilkan dokumen yang komprehensif namun mudah dipahami.
+                </p>
+              </div>
+
+              <div class="space-y-6">
+                <div
+                  class="bg-gradient-to-br from-yellow-100 to-amber-100 p-6 rounded-xl shadow-md"
+                >
+                  <h3 class="font-bold text-yellow-700 mb-4 text-lg">
+                    Timeline Penting:
+                  </h3>
+                  <ul class="space-y-4">
+                    <li class="pb-3 border-b border-yellow-200">
+                      <span class="font-semibold text-yellow-700">1962:</span>
+                      <p class="text-gray-700 mt-1">
+                        Perumusan pertama pada Muktamar ke-35 di Jakarta
+                      </p>
+                    </li>
+                    <li class="pb-3 border-b border-yellow-200">
+                      <span class="font-semibold text-yellow-700">1969:</span>
+                      <p class="text-gray-700 mt-1">
+                        Penyempurnaan pada Muktamar ke-38 di Ujung Pandang
+                        (Makassar)
+                      </p>
+                    </li>
+                    <li class="pb-3 border-b border-yellow-200">
+                      <span class="font-semibold text-yellow-700">2010:</span>
+                      <p class="text-gray-700 mt-1">
+                        Penyesuaian pada Muktamar ke-46 di Yogyakarta
+                      </p>
+                    </li>
+                    <li class="pb-3">
+                      <span class="font-semibold text-yellow-700"
+                        >Sekarang:</span
+                      >
+                      <p class="text-gray-700 mt-1">
+                        MKCHM terus menjadi pedoman utama warga Muhammadiyah
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-gradient-to-br from-amber-100 to-yellow-100 p-6 rounded-xl shadow-md"
+                >
+                  <h3 class="font-bold text-yellow-700 mb-3 text-lg">
+                    Tokoh Perumus:
+                  </h3>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i class="fas fa-user text-yellow-600 mt-1 mr-2"></i>
+                      <span>KH. Ahmad Badawi</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-user text-yellow-600 mt-1 mr-2"></i>
+                      <span>Prof. Dr. H. M. Rasjidi</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-user text-yellow-600 mt-1 mr-2"></i>
+                      <span>KH. Fakih Usman</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-user text-yellow-600 mt-1 mr-2"></i>
+                      <span>KH. Farid Ma'ruf</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fungsi MKCHM -->
+        <section id="fungsi" class="mb-12 section-animate">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <i class="fas fa-cogs text-yellow-600 text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-yellow-700">Fungsi MKCHM</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl shadow-md card-hover"
+              >
+                <h3
+                  class="font-bold text-yellow-700 mb-4 text-xl flex items-center"
+                >
+                  <i class="fas fa-compass mr-3"></i> Fungsi sebagai Pedoman
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  MKCHM berfungsi sebagai pedoman bagi warga Muhammadiyah dalam
+                  menjalani kehidupan beragama, bermasyarakat, dan bernegara
+                  sesuai dengan nilai-nilai Islam.
+                </p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Pedoman akidah dan ibadah</li>
+                  <li>Pedoman akhlak dan muamalah</li>
+                  <li>Pedoman dalam berkeluarga dan bermasyarakat</li>
+                  <li>Pedoman dalam berorganisasi dan bernegara</li>
+                </ul>
+              </div>
+              <div
+                class="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl shadow-md card-hover"
+              >
+                <h3
+                  class="font-bold text-yellow-700 mb-4 text-xl flex items-center"
+                >
+                  <i class="fas fa-university mr-3"></i> Fungsi sebagai Landasan
+                  Ideologis
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  MKCHM menjadi landasan ideologis bagi seluruh gerakan dan
+                  program Muhammadiyah, memastikan konsistensi dengan
+                  prinsip-prinsip dasar organisasi.
+                </p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Landasan gerakan dakwah</li>
+                  <li>Landasan pendidikan dan pengajaran</li>
+                  <li>Landasan pelayanan sosial dan kesehatan</li>
+                  <li>Landasan pemberdayaan masyarakat</li>
+                </ul>
+              </div>
+              <div
+                class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl shadow-md card-hover"
+              >
+                <h3
+                  class="font-bold text-yellow-700 mb-4 text-xl flex items-center"
+                >
+                  <i class="fas fa-users mr-3"></i> Fungsi sebagai Pemersatu
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  MKCHM berfungsi sebagai pemersatu warga Muhammadiyah yang
+                  berasal dari berbagai latar belakang, dengan memberikan
+                  panduan bersama tentang keyakinan dan cita-cita.
+                </p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Mempersatukan visi dan misi</li>
+                  <li>Menyatukan langkah perjuangan</li>
+                  <li>Memperkuat identitas organisasi</li>
+                  <li>Mengikat dalam satu keyakinan</li>
+                </ul>
+              </div>
+              <div
+                class="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl shadow-md card-hover"
+              >
+                <h3
+                  class="font-bold text-yellow-700 mb-4 text-xl flex items-center"
+                >
+                  <i class="fas fa-graduation-cap mr-3"></i> Fungsi sebagai
+                  Materi Pendidikan
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  MKCHM menjadi materi pendidikan dan pengkaderan dalam
+                  lingkungan Muhammadiyah, untuk membentuk kader yang memahami
+                  dan mengamalkan nilai-nilai organisasi.
+                </p>
+                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Materi pendidikan dasar kader</li>
+                  <li>Bahan pengajian dan ceramah</li>
+                  <li>Referensi dalam penelitian</li>
+                  <li>Dasar kurikulum pendidikan</li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl shadow-md"
+            >
+              <h3 class="font-bold text-yellow-700 mb-4 text-xl">
+                Fungsi MKCHM dalam Kehidupan Sehari-hari
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-home text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">Dalam Keluarga</h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Menjadi pedoman dalam membina keluarga sakinah
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-briefcase text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">Dalam Pekerjaan</h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Menjadi panduan etika profesional
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-handshake text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">
+                    Dalam Masyarakat
+                  </h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Menjadi pedoman interaksi sosial
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hakikat MKCHM -->
+        <section id="hakikat" class="mb-12 section-animate">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <i class="fas fa-lightbulb text-yellow-600 text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-yellow-700">Hakikat MKCHM</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div class="lg:col-span-2">
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                  Hakikat MKCHM adalah sebagai
+                  <strong
+                    >penjabaran dari keyakinan Islam Ahlus Sunnah wal
+                    Jama'ah</strong
+                  >
+                  yang dipegang teguh oleh Muhammadiyah. MKCHM bukanlah dokumen
+                  yang berdiri sendiri, melainkan merupakan kristalisasi dari
+                  pemahaman Islam yang bersumber pada Al-Qur'an dan As-Sunnah
+                  dengan pendekatan tajdid (pembaruan).
+                </p>
+
+                <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                  Secara hakikat, MKCHM merupakan panduan untuk mewujudkan Islam
+                  yang <strong>rahmatan lil 'alamin</strong> (menjadi rahmat
+                  bagi seluruh alam) melalui gerakan dakwah dan tajdid. MKCHM
+                  mengajak umat Islam untuk kembali kepada ajaran Islam yang
+                  murni, sekaligus merespons tantangan zaman dengan solusi yang
+                  Islami.
+                </p>
+
+                <div
+                  class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg mb-6"
+                >
+                  <p class="text-gray-700 italic">
+                    "Hakikat MKCHM terletak pada fungsinya sebagai alat untuk
+                    membentuk pribadi muslim yang memiliki integritas, berakhlak
+                    mulia, dan berkontribusi positif bagi kemajuan umat dan
+                    bangsa."
+                  </p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-yellow-700 mb-4">
+                  Hakikat sebagai Identitas
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  MKCHM menjadi identitas dan jati diri warga Muhammadiyah.
+                  Melalui MKCHM, Muhammadiyah menegaskan posisinya sebagai
+                  gerakan Islam yang mengedepankan pemurnian akidah,
+                  pengembangan pemikiran, dan pemberdayaan masyarakat.
+                </p>
+
+                <h3 class="text-xl font-semibold text-yellow-700 mb-4">
+                  Hakikat sebagai Manifestasi Islam Berkemajuan
+                </h3>
+                <p class="text-gray-700 mb-6">
+                  MKCHM merupakan manifestasi dari konsep Islam berkemajuan yang
+                  diusung Muhammadiyah. Konsep ini menekankan pada dinamisasi
+                  pemikiran Islam, respons terhadap perkembangan zaman, dan
+                  kontribusi positif bagi kemajuan peradaban.
+                </p>
+              </div>
+
+              <div class="space-y-6">
+                <div
+                  class="bg-gradient-to-br from-yellow-100 to-amber-100 p-6 rounded-xl shadow-md"
+                >
+                  <h3 class="font-bold text-yellow-700 mb-3 text-lg">
+                    Hakikat Utama:
+                  </h3>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i class="fas fa-star text-yellow-600 mt-1 mr-2"></i>
+                      <span>Penjabaran Islam Ahlus Sunnah wal Jama'ah</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-star text-yellow-600 mt-1 mr-2"></i>
+                      <span>Kristalisasi pemahaman Islam yang murni</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-star text-yellow-600 mt-1 mr-2"></i>
+                      <span>Panduan mewujudkan Islam rahmatan lil 'alamin</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-star text-yellow-600 mt-1 mr-2"></i>
+                      <span>Alat pembentuk pribadi muslim berkualitas</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i class="fas fa-star text-yellow-600 mt-1 mr-2"></i>
+                      <span>Manifestasi Islam berkemajuan</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="bg-gradient-to-br from-amber-100 to-yellow-100 p-6 rounded-xl shadow-md"
+                >
+                  <h3 class="font-bold text-yellow-700 mb-3 text-lg">
+                    Dimensi Hakikat:
+                  </h3>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-layer-group text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Dimensi Akidah (Keyakinan)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-layer-group text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Dimensi Syariah (Hukum)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-layer-group text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Dimensi Akhlak (Moral)</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="fas fa-layer-group text-yellow-600 mt-1 mr-2"
+                      ></i>
+                      <span>Dimensi Sosial-Kemasyarakatan</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Implementasi -->
+        <section id="implementasi" class="mb-12 section-animate">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                <i class="fas fa-hands-helping text-yellow-600 text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-yellow-700">
+                Implementasi MKCHM
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl shadow-md"
+              >
+                <h3 class="font-bold text-yellow-700 mb-4 text-xl">
+                  Implementasi dalam Kehidupan Individu
+                </h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fas fa-user-check text-yellow-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-semibold text-yellow-700">
+                        Pemahaman Akidah yang Benar
+                      </h4>
+                      <p class="text-gray-700 mt-1">
+                        Memahami dan mengamalkan akidah Islam yang murni sesuai
+                        pemahaman Ahlus Sunnah wal Jama'ah
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-pray text-yellow-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-semibold text-yellow-700">
+                        Ibadah yang Tulus
+                      </h4>
+                      <p class="text-gray-700 mt-1">
+                        Melaksanakan ibadah dengan ikhlas dan sesuai tuntunan
+                        Rasulullah SAW
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-heart text-yellow-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-semibold text-yellow-700">
+                        Akhlak Mulia
+                      </h4>
+                      <p class="text-gray-700 mt-1">
+                        Meneladani akhlak Rasulullah SAW dalam kehidupan
+                        sehari-hari
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 rounded-xl shadow-md"
+              >
+                <h3 class="font-bold text-yellow-700 mb-4 text-xl">
+                  Implementasi dalam Masyarakat
+                </h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fas fa-handshake text-yellow-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-semibold text-yellow-700">
+                        Amar Ma'ruf Nahi Munkar
+                      </h4>
+                      <p class="text-gray-700 mt-1">
+                        Mengajak kepada kebaikan dan mencegah kemungkaran dengan
+                        cara yang bijaksana
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-users text-yellow-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-semibold text-yellow-700">
+                        Ukhuwah Islamiyah
+                      </h4>
+                      <p class="text-gray-700 mt-1">
+                        Mempererat persaudaraan sesama muslim dan menjaga
+                        hubungan baik dengan non-muslim
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-balance-scale text-yellow-600 mt-1 mr-3"
+                    ></i>
+                    <div>
+                      <h4 class="font-semibold text-yellow-700">
+                        Keadilan Sosial
+                      </h4>
+                      <p class="text-gray-700 mt-1">
+                        Berperan aktif dalam mewujudkan keadilan dan
+                        kesejahteraan sosial
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 bg-gradient-to-r from-yellow-100 to-amber-100 p-6 rounded-xl shadow-md"
+            >
+              <h3 class="font-bold text-yellow-700 mb-4 text-xl">
+                Implementasi melalui Lembaga Muhammadiyah
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-school text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">Pendidikan</h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Melalui sekolah, madrasah, dan perguruan tinggi Muhammadiyah
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-hospital text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">Kesehatan</h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Melalui rumah sakit, klinik, dan layanan kesehatan
+                    Muhammadiyah
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-hands text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">Sosial</h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Melalui panti asuhan, panti jompo, dan program pemberdayaan
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                  <i class="fas fa-mosque text-yellow-600 text-2xl mb-2"></i>
+                  <h4 class="font-semibold text-yellow-700">Dakwah</h4>
+                  <p class="text-sm text-gray-600 mt-2">
+                    Melalui majelis taklim, tabligh, dan media dakwah
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-muhammadiyah-green text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4 flex items-center">
+              <i class="fas fa-book-open mr-2"></i> Tentang MKCHM
+            </h3>
+            <p class="text-yellow-100 text-sm">
+              Website pembelajaran tentang Matan Keyakinan dan Cita-cita Hidup
+              Muhammadiyah. Sumber referensi untuk memahami dasar-dasar
+              ideologis organisasi Muhammadiyah.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#pengertian"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Pengertian MKCHM</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#isi"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Isi MKCHM</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#sejarah"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Sejarah Perumusan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#fungsi"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Fungsi MKCHM</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#hakikat"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Hakikat MKCHM</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Sumber Belajar</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Kitab MKCHM Lengkap</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Materi Pengajian</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Video Pembelajaran</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-yellow-100 hover:text-white transition-colors duration-300 text-sm"
+                  >Artikel Terkait</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Kontak</h3>
+            <p class="text-yellow-100 mb-2 text-sm">
+              <i class="fas fa-envelope mr-2"></i> info@mkchm-muhammadiyah.id
+            </p>
+            <p class="text-yellow-100 mb-2 text-sm">
+              <i class="fas fa-phone mr-2"></i> +62 123 4567 890
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a
+                href="#"
+                class="text-yellow-100 hover:text-white transition-colors duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-yellow-100 hover:text-white transition-colors duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-yellow-100 hover:text-white transition-colors duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-yellow-100 hover:text-white transition-colors duration-300"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-yellow-600 mt-8 pt-6 text-center text-yellow-200 text-sm"
+        >
+          <p>
+            &copy; 2025 Website Pembelajaran MKCHM Muhammadiyah. Semua hak
+            dilindungi.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
+  </body>
+</html>
