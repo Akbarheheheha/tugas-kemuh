@@ -26,6 +26,34 @@
       .content {
         transition: all 0.3s ease;
       }
+      .leser{
+        outline: none;
+        width: max-content;
+        background: #ffffff;
+        position: relative;
+        overflow: hidden;
+        outline: none;
+        border-radius: 7px;
+      }
+      .leser::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 120%;
+        height: 100%;
+        background: 
+            linear-gradient(90deg, transparent, #23ce7e9f,transparent)
+        ;
+      }
+      .leser:hover::before{
+        animation: swipe 2s linear infinite;
+      }
+      @keyframes swipe {
+        to {
+            left: 100%;
+        }
+      }
       @media (max-width: 768px) {
         .sidebar {
           transform: translateX(-100%);
