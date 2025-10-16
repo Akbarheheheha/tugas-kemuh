@@ -1,107 +1,131 @@
- 
-      * {
-        font-family: "Poppins", sans-serif;
-      }
-      .sidebar {
-        transition: all 0.3s ease;
-        height: 100vh;
-        overflow-y: auto;
-      }
-      @keyframes gradientMove {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
+* {
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  transition: all 0.3s ease;
+  height: 100vh;
+  overflow-y: auto;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-      .animate-gradient {
-        background-size: 200% 200%;
-        animation: gradientMove 10s ease infinite;
-      }
-      .content {
-        transition: all 0.3s ease;
-      }
-      .leser{
-        outline: none;
-        width: max-content;
-        background: #ffffff;
-        position: relative;
-        overflow: hidden;
-        outline: none;
-        border-radius: 7px;
-      }
-      .leser::before{
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 120%;
-        height: 100%;
-        background: 
-            linear-gradient(90deg, transparent, #23ce7e9f,transparent)
-        ;
-      }
-      .leser:hover::before{
-        animation: swipe 2s linear infinite;
-      }
-      @keyframes swipe {
-        to {
-            left: 100%;
-        }
-      }
-      @media (max-width: 768px) {
-        .sidebar {
-          transform: translateX(-100%);
-          position: fixed;
-          z-index: 50;
-        }
-        .sidebar.active {
-          transform: translateX(0);
-        }
-        .overlay {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 40;
-        }
-        .overlay.active {
-          display: block;
-        }
-      }
-      .progress-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #0F5132, #0D9488);
-        width: 0%;
-        z-index: 100;
-        transition: width 0.3s ease;
-      }
-      .card-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
-          0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
-      .section-animate {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-      .section-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+.content {
+  transition: all 0.3s ease;
+}
+.leser {
+  outline: none;
+  width: max-content;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  border-radius: 7px;
+}
+.leser::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  filter: blur(1px);
+}
+.leser:hover {
+  box-shadow: 0 0 15px rgba(202, 163, 4, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.leser:hover::before {
+  animation: swipe 2s ease-in-out infinite;
+}
+
+@keyframes swipe {
+  0% {
+    left: -120%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+.leser::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 7px;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 50;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+  }
+  .overlay.active {
+    display: block;
+  }
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0f5132, #0d9488);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.3s ease;
+}
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.section-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
