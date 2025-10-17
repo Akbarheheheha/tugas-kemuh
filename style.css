@@ -1,6 +1,9 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+nav{
+  min-width: fit-content;
+}
 .sidebar {
   transition: all 0.3s ease;
   height: 100vh;
@@ -49,6 +52,7 @@
     transparent
   );
   filter: blur(1px);
+  pointer-events: none;
 }
 .leser:hover {
   box-shadow: 0 0 15px rgba(202, 163, 4, 0.5);
@@ -76,20 +80,22 @@
   inset: 0;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 7px;
+  pointer-events: none;
 }
+
 
 
 @media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-100%);
+    transform: translateX(-100%) !important;
     position: fixed;
     z-index: 50;
   }
   .sidebar.active {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
   .overlay {
-    display: none;
+    display: none ;
     position: fixed;
     top: 0;
     left: 0;

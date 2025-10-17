@@ -1,4 +1,4 @@
-      // Toggle sidebar on mobile
+      // Toggle sidebar di hp
       document
         .getElementById("sidebarToggle")
         .addEventListener("click", function () {
