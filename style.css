@@ -1,11 +1,12 @@
 * {
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
-html,body{
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
-nav{
+nav {
   min-width: fit-content;
   position: fixed;
   top: 0;
@@ -20,8 +21,9 @@ nav{
 }
 
 .animate-gradient {
-  background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
+  background-size: 200% 200% !important;
+  animation: gradientMove 10s ease infinite, kiri 1s ease-in-out 1 forwards !important;
+  transform: translatex(1000px)  scale(0.8);
 }
 
 @keyframes gradientMove {
@@ -35,6 +37,13 @@ nav{
     background-position: 0% 50%;
   }
 }
+
+@keyframes kiri {
+  to {
+    transform: translatex(0px)  scale(1);
+  }
+}
+
 
 .content {
   transition: all 0.3s ease;
@@ -95,12 +104,10 @@ nav{
   pointer-events: none;
 }
 
-
-
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 20 ;
+    top: 20;
     left: 0;
     height: 100vh;
     width: 260px;
@@ -108,13 +115,12 @@ nav{
     transform: translateX(-100%) !important;
     z-index: 999; /* pastikan di atas overlay */
     transition: transform 0.3s ease;
-
   }
   .sidebar.active {
     transform: translateX(0) !important;
   }
   .overlay {
-    display: none ;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -148,7 +154,7 @@ nav{
 .section-animate {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 .section-visible {
   opacity: 1;
