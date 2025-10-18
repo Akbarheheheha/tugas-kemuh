@@ -1,14 +1,29 @@
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; 
+}
+html,body{
+  max-width: 100%;
+  overflow-x: hidden;
 }
 nav{
   min-width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .sidebar {
   transition: all 0.3s ease;
   height: 100vh;
   overflow-y: auto;
 }
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -21,16 +36,13 @@ nav{
   }
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
-}
 .content {
   transition: all 0.3s ease;
 }
 .leser {
   outline: none;
-  width: max-content;
+  width: 100%;
+  max-width: max-content;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -87,9 +99,16 @@ nav{
 
 @media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-100%) !important;
     position: fixed;
-    z-index: 50;
+    top: 20 ;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    background: white;
+    transform: translateX(-100%) !important;
+    z-index: 999; /* pastikan di atas overlay */
+    transition: transform 0.3s ease;
+
   }
   .sidebar.active {
     transform: translateX(0) !important;
