@@ -67,10 +67,10 @@ document.querySelectorAll(".section-animate").forEach((section) => {
   observer.observe(section);
 });
 
-// Back to Top Button
+// btn ke atas
 const balikKeAtas = document.getElementById("backToTop");
 
-// Show/hide back to top button based on scroll position
+// muncul ilang btn ke atas
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 300) {
     balikKeAtas.classList.add("visible");

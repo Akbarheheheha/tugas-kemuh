@@ -22,7 +22,7 @@ nav {
 
 .animate-gradient {
   background-size: 200% 200% !important;
-  animation: gradientMove 10s ease infinite, kiri 1s ease-in-out 1 forwards !important;
+  animation: gradientMove 15s ease infinite, kiri 1s ease-in-out 1 forwards !important;
   transform: translatex(1000px)  scale(0.8);
 }
 
@@ -161,7 +161,6 @@ nav {
   transform: translateY(0);
 }
 
-/* Tambahkan di style.css */
 .loading-screen {
   position: fixed;
   top: 0;
