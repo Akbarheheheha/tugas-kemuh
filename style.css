@@ -140,7 +140,7 @@ nav {
   height: 4px;
   background: linear-gradient(90deg, #0f5132, #0d9488);
   width: 0%;
-  z-index: 100;
+  z-index: 10000;
   transition: width 0.3s ease;
 }
 .card-hover {

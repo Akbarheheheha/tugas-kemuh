@@ -93,7 +93,7 @@ window.addEventListener("load", function () {
 });
 
 // Fallback jika window.load tidak terpicu
-setTimeout(hideLoadingScreen, 3000); // Maksimal 3 detik
+setTimeout(hideLoadingScreen, 3000); 
 
 // Fallback untuk DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
