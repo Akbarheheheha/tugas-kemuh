@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/Logo_Muhammadiyah.svg-removebg-preview.png"
+    />
     <title>Anggota Tim - MKCHM Muhammadiyah</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -28,8 +37,9 @@
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
         z-index: 100;
       }
 
@@ -68,7 +78,7 @@
         color: white;
         padding: 3rem 2rem;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-block: 4rem;
       }
 
       .hero h1 {
@@ -109,12 +119,12 @@
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition: transform .2s ease 0s, box-shadow .3s ease .2s !important;
       }
 
       .member-card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.61);
       }
 
       .member-header {
@@ -164,6 +174,33 @@
         line-height: 1.5;
       }
 
+      .hidden-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .visible-card {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+       .gradient-card {
+        background-size: 200% 200%;
+        animation: GradientMoveCard 15s ease infinite;
+      }
+      @keyframes GradientMoveCard {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
       /* Footer */
       .footer {
         background-color: #0f5132;
@@ -191,6 +228,7 @@
       .footer-links a:hover {
         text-decoration: underline;
       }
+
 
       /* Responsive */
       @media (max-width: 768px) {
@@ -229,10 +267,10 @@
       <p>Memuat Konten...</p>
     </div>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar animate__animated animate__backInDown">
       <div class="logo">
         <img
-        src="assets/Logo_Muhammadiyah.svg-removebg-preview.png"
+          src="assets/Logo_Muhammadiyah.svg-removebg-preview.png"
           alt="Logo"
         />
         <h1>MKCHM - Muhammadiyah</h1>
@@ -244,7 +282,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero animate-gradient mb-20">
       <h1>anggota kelompok</h1>
     </section>
 
@@ -253,85 +291,80 @@
       <div class="members-grid">
         <!-- Anggota 1 -->
         <div class="member-card">
-          <div class="member-header">
+          <div class="member-header gradient-card">
             <div class="member-photo">
               <img src="https://picsum.photos/200/250" alt="" />
             </div>
           </div>
           <div class="member-info">
             <h3 class="member-name">Akbar</h3>
-            <p class="member-role">Project Manager</p>
+            <p class="member-role"></p>
             <p class="member-bio">
-              Memimpin tim dengan visi yang jelas dan strategi yang efektif
-              untuk mencapai tujuan proyek.
+             
             </p>
           </div>
         </div>
 
         <!-- Anggota 2 -->
         <div class="member-card">
-          <div class="member-header">
+          <div class="member-header gradient-card">
             <div class="member-photo">
               <img src="https://picsum.photos/200/250" alt="" />
             </div>
           </div>
           <div class="member-info">
             <h3 class="member-name">Repan</h3>
-            <p class="member-role">Frontend Developer</p>
+            <p class="member-role"></p>
             <p class="member-bio">
-              Mengubah desain menjadi kode yang elegan dan responsif dengan
-              perhatian pada detail.
+              
             </p>
           </div>
         </div>
 
         <!-- Anggota 3 -->
         <div class="member-card">
-          <div class="member-header">
+          <div class="member-header gradient-card">
             <div class="member-photo">
               <img src="https://picsum.photos/200/250" alt="" />
             </div>
           </div>
           <div class="member-info">
             <h3 class="member-name">Alip</h3>
-            <p class="member-role">Backend Developer</p>
+            <p class="member-role"></p>
             <p class="member-bio">
-              Membangun sistem yang kuat dan skalabel dengan fokus pada keamanan
-              dan performa.
+             
             </p>
           </div>
         </div>
 
         <!-- Anggota 4 -->
         <div class="member-card">
-          <div class="member-header">
+          <div class="member-header gradient-card">
             <div class="member-photo">
               <img src="https://picsum.photos/200/250" alt="" />
             </div>
           </div>
           <div class="member-info">
             <h3 class="member-name">Desta</h3>
-            <p class="member-role">UI/UX Designer</p>
+            <p class="member-role"></p>
             <p class="member-bio">
-              Menciptakan pengalaman pengguna yang intuitif dan menarik dengan
-              desain yang modern.
+             
             </p>
           </div>
         </div>
 
         <!-- Anggota 5 -->
         <div class="member-card">
-          <div class="member-header">
+          <div class="member-header gradient-card">
             <div class="member-photo">
               <img src="https://picsum.photos/200/250" alt="" />
             </div>
           </div>
           <div class="member-info">
             <h3 class="member-name">Loren</h3>
-            <p class="member-role">Data Analyst</p>
+            <p class="member-role"></p>
             <p class="member-bio">
-              Menganalisis data untuk memberikan wawasan yang berharga bagi
-              pengambilan keputusan.
+             
             </p>
           </div>
         </div>
@@ -372,19 +405,13 @@
       document.addEventListener("DOMContentLoaded", function () {
         const cards = document.querySelectorAll(".member-card");
         cards.forEach((card, index) => {
-          setTimeout(() => {
-            card.style.opacity = "0";
-            card.style.transform = "translateY(20px)";
-            card.style.transition = "opacity 0.5s, transform 0.5s";
+          card.classList.add("hidden-card");
 
-            setTimeout(() => {
-              card.style.opacity = "1";
-              card.style.transform = "translateY(0)";
-            }, 200);
+          setTimeout(() => {
+            card.classList.add("visible-card");
           }, index * 150);
         });
 
-        // Hilangkan layar loading setelah konten siap
         const loadingScreen = document.getElementById("loadingScreen");
         if (loadingScreen) {
           loadingScreen.style.opacity = "0";
