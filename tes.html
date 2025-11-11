@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/Logo_Muhammadiyah.svg-removebg-preview.png"
+    />
+    <title>kemuhammadiyahan bab 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              muhammadiyah: {
+                blue: "#004B8D",
+                gold: "#F4C300",
+                white: "#FFFFFF",
+                green: "#0F5132",
+                ijoMuda: "#7BE495", // #20C997 cadangan
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+     .icon-nav {
+        opacity: 0;
+        margin-right: 8px;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateX(-5px);
+      }
+
+      .nav-item:hover .icon-nav {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+
+    </style>
+<body>
+     <nav
+      class="bg-muhammadiyah-green animate__animated animate__backInDown text-white shadow-lg z-70"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <button id="sidebarToggle" class="mr-4 md:hidden">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+            <div class="flex items-center">
+              <img
+                class="h-12 mr-3"
+                src="assets/Logo_Muhammadiyah.svg-removebg-preview.png"
+                alt=""
+              />
+              <h1 class="text-xl font-bold">MKCHM - Muhammadiyah</h1>
+            </div>
+          </div>
+          <div class="container-link hidden md:flex space-x-6">
+           
+              <a href="#pengertian" class="nav-item">
+                <i class="icon-nav fas fa-book mr-2 text-white"></i>Pengertian
+              </a>
+              <a href="#isi" class="nav-item">
+                <i class="icon-nav fas fa-list mr-2 text-white"></i>Isi MKCHM
+              </a>
+              <a href="#fungsi" class="nav-item">
+                <i class="icon-nav fas fa-cog mr-2 text-white"></i>Fungsi
+              </a>
+              <a href="#hakikat" class="nav-item">
+                <i class="icon-nav fas fa-lightbulb mr-2 text-white"></i>hakikat
+              </a>
+              <a id="openBtn" class="nav-item open-btn cursor-pointer">
+                <i class="icon-nav fas fa-hands-helping mr-2 text-white"></i>anggota
+              </a>
+
+            <!-- <a
+              id="openBtn"
+              class="hover:text-yellow-200 transition-colors duration-300 open-btn cursor-pointer"
+              >anggota</a
+            > -->
+          </div>
+        </div>
+      </div>
+    </nav>
+</body>
+</html>

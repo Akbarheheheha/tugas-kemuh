@@ -93,7 +93,7 @@ window.addEventListener("load", function () {
 });
 
 // Fallback jika window.load tidak terpicu
-setTimeout(hideLoadingScreen, 3000); 
+setTimeout(hideLoadingScreen, 3000);
 
 // Fallback untuk DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
@@ -116,3 +116,55 @@ document.addEventListener("readystatechange", function () {
     hideLoadingScreen();
   }
 });
+
+// modal
+
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("modalOverlay");
+
+// Fungsi untuk membuka modal
+openBtn.onclick = () => {
+  overlay.style.display = "flex";
+  document.body.style.overflow = "hidden"; // Mencegah scroll di body saat modal terbuka
+};
+
+// Fungsi untuk menutup modal
+closeBtn.onclick = () => {
+  overlay.style.display = "none";
+  document.body.style.overflow = "auto"; // Mengembalikan scroll di body
+};
+
+// Tutup jika klik di luar kotak modal
+window.onclick = (e) => {
+  if (e.target === overlay) {
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+};
+
+// Tutup modal dengan tombol Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && overlay.style.display === "flex") {
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+// Animasi untuk kartu anggota saat modal terbuka
+overlay.addEventListener("click", () => {
+  const cards = document.querySelectorAll(".member-card");
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("visible-card");
+    }, index * 100);
+  });
+});
+
+// Tambahkan di script.js
+document
+  .getElementById("openBtnSidebar")
+  .addEventListener("click", function () {
+    document.getElementById("modalOverlay").style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });

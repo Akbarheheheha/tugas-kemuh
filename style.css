@@ -14,6 +14,19 @@ nav {
   width: 100%;
   z-index: 1000;
 }
+
+.icon-nav {
+  opacity: 0;
+  margin-right: 8px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(10px);
+}
+
+.nav-item:hover .icon-nav {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .sidebar {
   transition: all 0.3s ease;
   height: 100vh;
@@ -23,7 +36,7 @@ nav {
 .animate-gradient {
   background-size: 200% 200% !important;
   animation: gradientMove 15s ease infinite, kiri 1s ease-in-out 1 forwards !important;
-  transform: translatex(1000px)  scale(0.8);
+  transform: translatex(1000px) scale(0.8);
 }
 
 @keyframes gradientMove {
@@ -40,10 +53,9 @@ nav {
 
 @keyframes kiri {
   to {
-    transform: translatex(0px)  scale(1);
+    transform: translatex(0px) scale(1);
   }
 }
-
 
 .content {
   transition: all 0.3s ease;
@@ -167,7 +179,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0F5132, #0D9488);
+  background: linear-gradient(135deg, #0f5132, #0d9488);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,7 +191,7 @@ nav {
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid rgba(255,255,255,0.3);
+  border: 5px solid rgba(255, 255, 255, 0.3);
   border-top: 5px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -187,8 +199,12 @@ nav {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-screen p {
@@ -203,7 +219,7 @@ nav {
   left: 30px;
   width: 50px;
   height: 50px;
-  background: #0F5132;
+  background: #0f5132;
   color: white;
   border: none;
   border-radius: 50%;
@@ -211,8 +227,8 @@ nav {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,7 +240,229 @@ nav {
 }
 
 .back-to-top:hover {
-  background: #0D9488;
+  background: #0d9488;
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay (latar belakang gelap) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Kotak isi modal */
+.modal-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  opacity: 0;
+  animation: popIn 0.3s ease forwards;
+  position: relative;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.modal-header h2 {
+  color: #0f5132;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.modal-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Tombol tutup */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Members grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.member-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e5e5;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-header {
+  background: linear-gradient(to right, #0f5132, #7be495);
+  height: 120px;
+  position: relative;
+}
+
+.member-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #0f5132;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 60px 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.member-name {
+  font-size: 1.4rem;
+  color: #0f5132;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: #7be495;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.member-bio {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.hidden-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gradient-card {
+  background-size: 200% 200%;
+  animation: GradientMoveCard 15s ease infinite;
+}
+
+@keyframes GradientMoveCard {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-box {
+    padding: 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-header h2 {
+    font-size: 1.6rem;
+  }
 }
